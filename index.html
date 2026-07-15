@@ -3,252 +3,250 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AI训练师小省 | Xiao Sheng</title>
+    <title>训练 AI，训练自己 | 小省 3D World</title>
     <meta
       name="description"
-      content="AI训练师小省的个人网站，展示 AI 工具、提示词、数据整理、内容质量评估、自动化工作流、小项目和工具资源。"
+      content="小省的个人 3D 世界，把 AI 工具、提示词、数据整理、内容质检和自动化工作流组织成一个可探索的个人世界模型。"
     />
-    <meta name="theme-color" content="#070806" />
-    <meta property="og:title" content="AI训练师小省 | Xiao Sheng" />
-    <meta
-      property="og:description"
-      content="训练 AI，也训练自己。把提示词、数据、工具和审美整理成可复用的工作流。"
-    />
+    <meta name="theme-color" content="#f9f9fb" />
+    <meta property="og:title" content="训练 AI，训练自己 | 小省 3D World" />
+    <meta property="og:description" content="一个面向 AI 训练师与未来 AI 产品经理的沉浸式个人网站。" />
     <meta property="og:type" content="website" />
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="cursor-glow" aria-hidden="true"></div>
-    <div class="site-shell">
-      <header class="topbar">
-        <a class="brand" href="#home" aria-label="回到首页">
-          <span class="brand-mark">XS</span>
-          <span>AI TRAINER</span>
-        </a>
-        <nav class="nav" aria-label="主导航">
-          <a href="#about">Who</a>
-          <a href="#skills">Can do</a>
-          <a href="#projects">Projects</a>
-          <a href="#toolbox">Toolbox</a>
-          <a href="#contact">Contact</a>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <div class="ambient-field" aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#home" aria-label="小省个人网站首页">
+        <span class="brand-mark">XS</span>
+        <span>小省 3D World</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        菜单
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="主导航">
+        <a href="#about">我是谁</a>
+        <a href="#insights">能力模型</a>
+        <a href="#marble">工作台</a>
+        <a href="#community">项目星图</a>
+        <a href="#cases">案例研究</a>
+        <a href="#learn">学习系统</a>
+        <a href="#api">工具接口</a>
+        <a href="#spark">联系</a>
+      </nav>
+      <div class="header-actions" aria-label="页面入口">
+        <a href="#about">经历</a>
+        <a href="#future">目标</a>
+        <a href="#spark">联系我</a>
+        <button class="mode-toggle" type="button" data-quality-toggle aria-pressed="false">轻量模式</button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-media" aria-label="个人 3D 世界媒体首屏">
+          <img
+            class="hero-video"
+            src="./assets/ai-renaissance-hero.png"
+            alt="AI 训练师小省的沉浸式世界模型背景"
+          />
+          <canvas class="world-canvas" data-world-canvas aria-hidden="true"></canvas>
+          <div class="media-overlay">
+            <span>AI TRAINER</span>
+            <span>PERSONAL WORLD MODEL</span>
+            <span>PROMPT / DATA / WORKFLOW</span>
+          </div>
+        </div>
+
+        <div class="hero-copy">
+          <p class="eyebrow">XIAO SHENG / PERSONAL WORLD MODEL</p>
+          <h1 id="hero-title">训练 AI，<br />训练自己</h1>
+          <p class="hero-lede">
+            我把 AI 工具、提示词、数据整理、内容质检和自动化工作流，组织成一个可以探索、推理和持续升级的个人世界模型。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#community">进入项目星图</a>
+            <a class="button secondary" href="#insights">了解我的能力模型</a>
+          </div>
+        </div>
+
+        <nav class="world-node-nav" aria-label="3D 世界节点导航">
+          <a class="world-nav-node prompt" href="#insights" data-node="Prompt">Prompt</a>
+          <a class="world-nav-node data" href="#about" data-node="Data">Data</a>
+          <a class="world-nav-node quality" href="#cases" data-node="Quality">Quality</a>
+          <a class="world-nav-node projects" href="#community" data-node="Projects">Projects</a>
+          <a class="world-nav-node workflow" href="#marble" data-node="Workflow">Workflow</a>
+          <a class="world-nav-node tools" href="#api" data-node="Tools">Tools</a>
         </nav>
-      </header>
 
-      <main>
-        <section class="hero edition-hero" id="home">
-          <img class="edition-image" src="./assets/ai-renaissance-hero.png" alt="AI 训练师小省的 Renaissance 工作室主视觉" />
-          <div class="edition-shade" aria-hidden="true"></div>
+        <aside class="hero-index" aria-label="当前页面状态">
+          <span>01</span>
+          <span>3D 个人首页</span>
+          <span>世界模型叙事</span>
+        </aside>
+      </section>
 
-          <aside class="edition-rail" aria-label="版本导航">
-            <span>XS EDITION</span>
-            <a href="#about">01 / Who</a>
-            <a href="#skills">02 / Skills</a>
-            <a href="#projects">03 / Projects</a>
-            <a href="#toolbox">04 / Toolbox</a>
-          </aside>
+      <section class="section intro-grid" id="about">
+        <div class="section-label">关于</div>
+        <div>
+          <h2>从任务到系统</h2>
+        </div>
+        <div class="section-copy">
+          <p>
+            我是 AI 训练师小省，关注 AI 工具、提示词设计、数据整理、内容质量评估和自动化工作流。这个首页用世界模型的方式，把我的能力、项目和工具关系组织成一个可探索的 3D 空间。
+          </p>
+          <p>
+            你看到的不只是一个作品集页面，而是一张个人能力地图：每个节点代表一种可以落地的工作方式，每个项目都连接到真实问题、工具选择和交付结果。
+          </p>
+        </div>
+      </section>
 
-          <div class="edition-copy">
-            <p class="edition-kicker">AI TRAINER 小省</p>
-            <h1>
-              <span>XIAO SHENG</span>
-              <span>EDITION 2026</span>
-            </h1>
-            <p>
-              训练 AI，也训练自己。把提示词、数据、工具和审美整理成可复用的工作流。
-            </p>
-            <div class="hero-actions" aria-label="首页入口">
-              <a class="button primary" href="#projects">查看项目</a>
-              <a class="button" href="#toolbox">打开工具箱</a>
-              <a class="button ghost" href="#contact">联系我</a>
+      <section class="section feature-strip" id="insights">
+        <div class="section-heading">
+          <span class="section-label">能力模型</span>
+          <h2>把“会用 AI”变成可说明、可复盘、可迁移的能力。</h2>
+        </div>
+        <div class="insight-grid">
+          <article data-nav-target="#insights" tabindex="0">
+            <span>Prompt</span>
+            <h3>提示词设计</h3>
+            <p>把模糊需求拆成角色、目标、格式、限制和质检标准，并通过多轮测试优化输出质量。</p>
+          </article>
+          <article data-nav-target="#about" tabindex="0">
+            <span>Data</span>
+            <h3>数据整理</h3>
+            <p>把图片、文本、表格和链接整理成可命名、可分类、可检索的素材库和训练样本。</p>
+          </article>
+          <article data-nav-target="#marble" tabindex="0">
+            <span>Workflow</span>
+            <h3>自动化工作流</h3>
+            <p>用 Codex、脚本和网页工具把重复任务做成流程，提高学习、整理和交付效率。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section marble-lab" id="marble">
+        <div class="lab-copy">
+          <span class="section-label">工作台</span>
+          <h2>一个面向学习、整理和交付的 AI 工作台。</h2>
+          <p>
+            工作台把资料输入、提示结构、输出检查、标注规则和复盘沉淀放在同一个流程里。每一次项目经验都会变成下一次可以复用的模板。
+          </p>
+          <a class="button primary" href="#community">进入项目星图</a>
+        </div>
+        <div class="lab-board" aria-label="个人 AI 工作台界面">
+          <div class="board-toolbar">
+            <span>Xiao Sheng OS</span>
+            <span>AI workflow</span>
+          </div>
+          <div class="board-main">
+            <div class="world-tile tall" data-nav-target="#community" tabindex="0">
+              <span>Portfolio</span>
+              <strong>个人网站搭建</strong>
+            </div>
+            <div class="world-tile" data-nav-target="#api" tabindex="0">
+              <span>Tool</span>
+              <strong>网页图片提取器</strong>
+            </div>
+            <div class="world-tile" data-nav-target="#learn" tabindex="0">
+              <span>Learn</span>
+              <strong>英语连连看游戏</strong>
+            </div>
+            <div class="world-tile wide" data-nav-target="#cases" tabindex="0">
+              <span>System</span>
+              <strong>提示词与质检模板</strong>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div class="edition-deck" aria-label="AI 训练师能力发布卡片">
-            <div class="deck-topline">
-              <span>Release Notes</span>
-              <b data-release-count>01 / 04</b>
-            </div>
-            <article class="release-card is-active" data-release-card="0">
-              <span>01</span>
-              <h2>Prompt Atelier</h2>
-              <p>把一句模糊需求，整理成角色、目标、格式、限制和质检标准。</p>
-            </article>
-            <article class="release-card" data-release-card="1">
-              <span>02</span>
-              <h2>Data Cabinet</h2>
-              <p>把文本、图片、表格、链接清洗成可命名、可分类、可检索的素材库。</p>
-            </article>
-            <article class="release-card" data-release-card="2">
-              <span>03</span>
-              <h2>Quality Lens</h2>
-              <p>从准确性、完整性、语气、格式和目标匹配度检查 AI 输出。</p>
-            </article>
-            <article class="release-card" data-release-card="3">
-              <span>04</span>
-              <h2>Workflow Press</h2>
-              <p>把一次项目经验压成模板，让下一次交付更快、更稳、更像系统。</p>
-            </article>
-            <div class="release-controls" aria-label="切换能力卡片">
-              <button class="release-dot is-active" type="button" data-release="0">Prompt</button>
-              <button class="release-dot" type="button" data-release="1">Data</button>
-              <button class="release-dot" type="button" data-release="2">Review</button>
-              <button class="release-dot" type="button" data-release="3">Workflow</button>
-            </div>
-          </div>
-        </section>
+      <section class="section media-section" id="community">
+        <div class="section-heading">
+          <span class="section-label">项目星图</span>
+          <h2>用漂浮项目岛屿展示我的 AI 训练理解与交付方式。</h2>
+        </div>
+        <div class="media-grid">
+          <article class="media-card large project-island" data-project-id="portfolio-world" tabindex="0">
+            <img src="./assets/ai-renaissance-hero.png" alt="个人 3D 世界参考画面" />
+            <div><span>3D Site</span><strong>个人 3D 世界首页</strong></div>
+          </article>
+          <article class="media-card tone-a project-island" data-project-id="prompt-system" tabindex="0"><span>Prompt</span><strong>提示词系统</strong></article>
+          <article class="media-card tone-b project-island" data-project-id="data-cleaning" tabindex="0"><span>Data</span><strong>素材与数据整理</strong></article>
+          <article class="media-card tone-c project-island" data-project-id="quality-review" tabindex="0"><span>Quality</span><strong>内容质检标准</strong></article>
+          <article class="media-card tone-d project-island" data-project-id="automation-flow" tabindex="0"><span>Workflow</span><strong>自动化工作流</strong></article>
+          <article class="media-card tone-a project-island" data-project-id="image-extractor" tabindex="0"><span>Tool</span><strong>网页图片提取器</strong></article>
+          <article class="media-card tone-b project-island" data-project-id="learning-game" tabindex="0"><span>Learn</span><strong>英语连连看游戏</strong></article>
+          <article class="media-card tone-c project-island" data-project-id="ai-music" tabindex="0"><span>Music AI</span><strong>音乐生成评估</strong></article>
+          <article class="media-card tone-d project-island" data-project-id="future-pm" tabindex="0"><span>Future</span><strong>AI 产品经理路径</strong></article>
+        </div>
+      </section>
 
-        <section class="section split" id="about">
-          <div class="section-kicker">01 WHO IS 小省</div>
-          <div>
-            <h2>我把 AI 当成一套可以被训练、评估和复用的工作系统。</h2>
-          </div>
-          <div class="section-copy">
-            <p>
-              我是 AI训练师小省，关注 AI 工具、提示词设计、数据整理、内容质量评估和自动化工作流。
-              我喜欢把一个模糊任务拆成清楚步骤：定义目标、设计输入、观察输出、优化规则、沉淀模板。
-            </p>
-            <p>
-              这个网站面向面试展示：你可以快速看到我的学习方向、动手项目、工具箱和持续整理能力。
-            </p>
-          </div>
-        </section>
+      <section class="section case-section" id="cases">
+        <div class="section-heading">
+          <span class="section-label">案例研究</span>
+          <h2>用清晰的结构讲清楚我如何解决问题。</h2>
+        </div>
+        <div class="case-list">
+          <article data-project-id="portfolio-world" tabindex="0">
+            <span>01</span>
+            <h3>个人网站搭建</h3>
+            <p>从定位、参考风格、信息结构到静态页面实现，形成可展示、可部署、可持续扩展的网站入口。</p>
+          </article>
+          <article data-project-id="image-extractor" tabindex="0">
+            <span>02</span>
+            <h3>网页图片提取器</h3>
+            <p>围绕素材收集效率，设计浏览器扩展和文件整理流程，减少手动保存和命名成本。</p>
+          </article>
+          <article data-project-id="learning-game" tabindex="0">
+            <span>03</span>
+            <h3>学习小游戏</h3>
+            <p>把英语词汇练习转成可玩的交互原型，练习从学习内容到网页体验的转换。</p>
+          </article>
+        </div>
+      </section>
 
-        <section class="section" id="skills">
-          <div class="section-heading">
-            <span class="section-kicker">02 WHAT I CAN DO</span>
-            <h2>把“会用 AI”变成可说明、可复盘、可迁移的能力。</h2>
-          </div>
-          <div class="skill-grid">
-            <article>
-              <span>01</span>
-              <h3>提示词设计</h3>
-              <p>为写作、分析、整理、网页制作等任务设计结构化提示词，并通过多轮测试优化输出质量。</p>
-            </article>
-            <article>
-              <span>02</span>
-              <h3>数据整理</h3>
-              <p>把图片、文本、表格、资料清洗成可命名、可分类、可检索的素材库。</p>
-            </article>
-            <article>
-              <span>03</span>
-              <h3>内容质检</h3>
-              <p>从准确性、完整性、格式、可读性和目标匹配度检查 AI 输出，建立评估标准。</p>
-            </article>
-            <article>
-              <span>04</span>
-              <h3>自动化工作流</h3>
-              <p>用 Codex、脚本和网页工具把重复任务做成流程，提高学习、整理和交付效率。</p>
-            </article>
-          </div>
-        </section>
+      <section class="section learning-api" id="learn">
+        <div class="learn-panel">
+          <span class="section-label">学习系统</span>
+          <h2>从一次任务开始，沉淀自己的 AI 工作方法。</h2>
+          <p>学习区用于沉淀提示词、项目复盘、工具教程和质检标准，让每次练习都能变成下一次交付的基础。</p>
+        </div>
+        <div class="api-panel" id="api">
+          <span class="section-label">工具接口</span>
+          <pre><code>POST /v1/xiaosheng/world
+{
+  "role": "AI Trainer",
+  "mode": "prompt_data_workflow",
+  "goal": "train_ai_train_myself"
+}</code></pre>
+        </div>
+      </section>
 
-        <section class="section" id="projects">
-          <div class="section-heading">
-            <span class="section-kicker">03 PROJECTS I BUILT</span>
-            <h2>小项目不是装饰，是我解决问题的证据。</h2>
-          </div>
+      <section class="section final-cta" id="spark">
+        <span class="section-label">联系</span>
+        <h2>期待与你一起创造更好的 AI 产品体验。</h2>
+        <div class="final-actions">
+          <a class="button secondary" href="#about" id="past">我的经历</a>
+          <a class="button secondary" href="#insights" id="future">能力模型</a>
+          <a class="button secondary" href="#about">了解我的能力模型</a>
+          <a class="button primary" href="#community">查看项目星图</a>
+        </div>
+      </section>
+    </main>
 
-          <div class="project-list">
-            <article class="project-card">
-              <div class="project-index">01</div>
-              <div>
-                <h3>Codex 个人网站搭建</h3>
-                <dl>
-                  <div><dt>问题</dt><dd>面试时需要一个能快速展示个人定位、项目和学习能力的网站。</dd></div>
-                  <div><dt>工具</dt><dd>Codex、HTML、CSS、JavaScript、参考站点分析。</dd></div>
-                  <div><dt>过程</dt><dd>先确定人设和结构，再参考交互动效，最后生成可部署的静态页面。</dd></div>
-                  <div><dt>结果</dt><dd>形成一个适合面试展示的个人作品集入口。</dd></div>
-                  <div><dt>收获</dt><dd>学会把视觉风格、内容结构和职业目标放在同一个页面里。</dd></div>
-                </dl>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-index">02</div>
-              <div>
-                <h3>网页图片提取器</h3>
-                <dl>
-                  <div><dt>问题</dt><dd>网页图片收集和整理容易重复、低效、命名混乱。</dd></div>
-                  <div><dt>工具</dt><dd>浏览器扩展、JavaScript、文件整理流程。</dd></div>
-                  <div><dt>过程</dt><dd>识别网页图片资源，提取链接，批量保存并按用途整理。</dd></div>
-                  <div><dt>结果</dt><dd>减少手动保存时间，让素材收集更稳定。</dd></div>
-                  <div><dt>收获</dt><dd>理解了从真实需求出发设计工具的重要性。</dd></div>
-                </dl>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-index">03</div>
-              <div>
-                <h3>英语中文连连看小游戏</h3>
-                <dl>
-                  <div><dt>问题</dt><dd>单词学习容易枯燥，需要更轻量的练习方式。</dd></div>
-                  <div><dt>工具</dt><dd>HTML、CSS、JavaScript、交互设计。</dd></div>
-                  <div><dt>过程</dt><dd>设计关卡、词组匹配、反馈状态和完成提示。</dd></div>
-                  <div><dt>结果</dt><dd>做出一个可玩的学习小游戏原型。</dd></div>
-                  <div><dt>收获</dt><dd>练习了把学习内容转成互动体验的能力。</dd></div>
-                </dl>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="section toolbox" id="toolbox">
-          <div class="section-heading">
-            <span class="section-kicker">04 AI TOOLBOX</span>
-            <h2>我的工具箱：把灵感变成产出的那一层。</h2>
-          </div>
-          <div class="tool-cloud" aria-label="常用 AI 工具">
-            <span>ChatGPT</span>
-            <span>Codex</span>
-            <span>Notion</span>
-            <span>GitHub</span>
-            <span>Vercel</span>
-            <span>Canva</span>
-            <span>飞书</span>
-            <span>Excel</span>
-            <span>Markdown</span>
-            <span>Prompt Library</span>
-          </div>
-        </section>
-
-        <section class="section resources" id="resources">
-          <div class="section-heading">
-            <span class="section-kicker">05 BOOKS / RESOURCES</span>
-            <h2>我喜欢能改变工作方式的书、工具和资源。</h2>
-          </div>
-          <div class="resource-grid">
-            <article>
-              <h3>书</h3>
-              <p>《原则》《刻意练习》《金字塔原理》《纳瓦尔宝典》</p>
-              <small>用于建立判断、表达、学习和长期主义的底层方法。</small>
-            </article>
-            <article>
-              <h3>工具</h3>
-              <p>ChatGPT、Codex、Notion、飞书、Canva、GitHub</p>
-              <small>用于想法生成、网页搭建、资料管理、视觉表达和版本记录。</small>
-            </article>
-            <article>
-              <h3>资源</h3>
-              <p>AI 产品案例、优秀作品集、提示词案例库、公开课程</p>
-              <small>用于持续观察好作品，并把经验整理成自己的模板。</small>
-            </article>
-          </div>
-        </section>
-
-        <section class="section contact" id="contact">
-          <span class="section-kicker">06 CONTACT</span>
-          <h2>如果你想了解我如何使用 AI 解决真实问题，我们可以聊聊。</h2>
-          <div class="contact-actions">
-            <a class="button primary" href="mailto:hello@example.com">hello@example.com</a>
-            <a class="button" href="#projects">查看项目</a>
-            <a class="button ghost" href="#home">回到顶部</a>
-          </div>
-        </section>
-      </main>
+    <div class="project-panel" data-project-panel aria-hidden="true">
+      <div class="project-panel__backdrop" data-close-panel></div>
+      <article class="project-panel__dialog" role="dialog" aria-modal="true" aria-labelledby="project-panel-title">
+        <button class="project-panel__close" type="button" data-close-panel>关闭</button>
+        <span class="section-label" data-project-type>Project</span>
+        <h2 id="project-panel-title" data-project-title>项目标题</h2>
+        <div class="project-panel__body" data-project-body></div>
+      </article>
     </div>
 
-    <script src="./script.js"></script>
+    <script type="module" src="./script.js"></script>
   </body>
 </html>

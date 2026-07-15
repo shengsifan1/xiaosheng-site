@@ -1,0 +1,17 @@
+Weitao Sheng
+AI Trainer · Future AI Product Manager
+
+This is a temporary downloadable resume placeholder.
+Replace this file with the final PDF resume when it is ready.
+
+Focus:
+- AI data annotation
+- SFT data construction
+- RAG / CoT / Agent understanding
+- Reward model preference ranking
+- Prompt Engineering
+- Quality evaluation
+- Annotation guideline writing
+
+Contact:
+hello@example.com
