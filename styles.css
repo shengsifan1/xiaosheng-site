@@ -701,6 +701,90 @@ pre {
   background: linear-gradient(180deg, transparent, rgba(46, 46, 56, 0.78));
 }
 
+.music-case {
+  background: #ededed;
+}
+
+.music-case-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+  gap: 12px;
+  align-items: stretch;
+}
+
+.music-player {
+  min-height: 520px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: #111;
+}
+
+.music-player video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  object-fit: contain;
+  background: #111;
+}
+
+.music-story {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(28px, 4vw, 56px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+}
+
+.music-kicker,
+.prompt-block > span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.music-story h3 {
+  margin: 14px 0 24px;
+  font-size: clamp(36px, 5vw, 68px);
+  line-height: 0.95;
+}
+
+.music-story > p {
+  margin: 0 0 16px;
+  color: #555;
+  line-height: 1.75;
+}
+
+.music-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 24px;
+}
+
+.music-specs span {
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.prompt-block {
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.prompt-block p {
+  margin: 10px 0 0;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
 .media-card.large div {
   position: relative;
   z-index: 1;
@@ -935,7 +1019,8 @@ body.is-lightweight .hero-video {
   .intro-grid,
   .section-heading,
   .marble-lab,
-  .learning-api {
+  .learning-api,
+  .music-case-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1035,6 +1120,20 @@ body.is-lightweight .hero-video {
 
   .media-card.large {
     min-height: 360px;
+  }
+
+  .music-player,
+  .music-player video {
+    min-height: 0;
+  }
+
+  .music-player video {
+    aspect-ratio: 9 / 16;
+    max-height: 76svh;
+  }
+
+  .music-story {
+    padding: 28px 20px;
   }
 
   .board-main {

@@ -5,8 +5,8 @@ export function createProjectPanel({ projects, panel, title, type, body }) {
     const fields = [
       ["项目背景", project.background],
       ["目标", project.goal],
-      ["页面职责", project.role],
-      ["设计难点", project.challenge],
+      ["我的职责", project.role],
+      ["关键难点", project.challenge],
       ["解决方法", project.solution],
       ["交付内容", project.deliverable],
       ["复盘", project.review],
